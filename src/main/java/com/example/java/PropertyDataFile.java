@@ -11,14 +11,14 @@ public class PropertyDataFile {
 		// TODO Auto-generated method stub
 
 		Properties prop=new Properties();
-		FileInputStream fis =new FileInputStream("C:\\Users\\DELL\\Documents\\my-project\\selenium-course\\src\\com\\exp\\java\\data.properties");
+		FileInputStream fis =new FileInputStream("C:\\Users\\DELL\\Documents\\my-project\\selenium-course\\src\\main\\java\\com\\example\\java\\data.properties");
 		prop.load(fis);	
 		System.out.println(prop.getProperty("Hobbies"));
 		System.out.println(prop.getProperty("city"));
 		
-		prop.setProperty("city", "London");
+		prop.setProperty("city", "Paris");
 		System.out.println(prop.getProperty("city"));
-		FileOutputStream fos =new FileOutputStream("C:\\Users\\DELL\\Documents\\my-project\\selenium-course\\src\\com\\exp\\java\\data.properties");
+		FileOutputStream fos =new FileOutputStream("C:\\Users\\DELL\\Documents\\my-project\\selenium-course\\src\\main\\java\\com\\example\\java\\data.properties");
         prop.store(fos, null);
 		
 	
