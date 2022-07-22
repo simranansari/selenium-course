@@ -15,11 +15,23 @@ public class Day1 {
 		
 	}
 	
+	
+	// If u want to fail test u can put Assert.assertTrue(false) that means it will expect false true arguments inside
+    //  this block but actually we r sending false arguments that should fail the test 
 	@Test
 	public void Demo()
 	{
 		System.out.println("hello");//automation
+		Assert.assertTrue(false);
 	}
+	
+	
+	@Test
+	public void DDemo()
+	{
+		System.out.println("hello");//automation
+	}
+	
 	
 	// It will onlt execute once all the test completed in all the test folders
 	@AfterSuite
@@ -39,12 +51,6 @@ public class Day1 {
 	
 	
 	
-//	@Test
-//	public void Demo()
-//	{
-//		System.out.println("hello");//automation
-//		Assert.assertTrue(false);
-//	}
 //	
 	
 //	@Test

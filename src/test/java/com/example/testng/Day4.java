@@ -5,6 +5,19 @@ import org.testng.annotations.Test;
 
 public class Day4 {
 	
+// Centralized - those values which are common across all the test folder u can define those parameters here after the suite
+	// values those are specific to particular test folder then u should define inside the test folder Xml file.
+	@Parameters({ "URL" })
+	@Test
+	public void WebloginHomeLoan(String uname)
+	{
+		//selenium
+		System.out.println("webloginhomePersonalLoan");
+		System.out.println(uname);
+		
+	}
+	
+	
 	@Test
 	public void WebloginHomeLoan()
 	{
@@ -36,23 +49,6 @@ public class Day4 {
 		System.out.println("APIloginHome");
 	}
 }
-
-	
-	
-	
-	
-	
-	
-	
-//	@Parameters({ "URL" })
-//	@Test
-//	public void WebloginHomeLoan(String uname)
-//	{
-//		//selenium
-//		System.out.println("webloginhomePersonalLoan");
-//		System.out.println(uname);
-//		
-//	}
 //	
 //	
 	

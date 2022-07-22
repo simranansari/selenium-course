@@ -286,4 +286,7 @@ GitHub.sublime-settings
 # Ignore TestNG files
 test-output/*
 
+# Ignore reports
+reports/
+
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,maven,visualstudiocode,intellij,java,sublimetext
