@@ -289,4 +289,8 @@ test-output/*
 # Ignore reports
 reports/
 
+#
+src/main/resources/localdata
+
+
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,maven,visualstudiocode,intellij,java,sublimetext
