@@ -17,7 +17,9 @@ public class Loginapplication {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
-		Loginpage login = new Loginpage(driver);
+//		Loginpage login = new Loginpage(driver);
+		LoginpagePF login = new LoginpagePF(driver);
+
 		login.getUserNameElement().sendKeys("rahul");
 		login.getPasswordElement().sendKeys("rahulshettyacademy");
 		login.getSignIn().click();
