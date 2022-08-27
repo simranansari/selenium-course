@@ -1,10 +1,14 @@
-package com.example.selenium.driverutility;
+package endToEndProject;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -50,4 +54,24 @@ public class DriverUtility {
 		return driver;
 	}
 	
+	public static String getProperty(String propertyName) throws IOException, URISyntaxException {
+		
+		String propertyValue = null;
+		
+		Properties prop= new Properties();
+		FileInputStream fis = new FileInputStream(ClassLoader.getSystemResource("data.properties").toURI().getPath());
+		prop.load(fis);
+		propertyValue = prop.getProperty(propertyName);
+		
+		return propertyValue;
+	}
+
+	public static void getScreenShotPath(WebDriver driver, String testMethodName) throws IOException {
+		// TODO Auto-generated method stub
+		TakesScreenshot SS=(TakesScreenshot) driver;
+		File source =SS.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir")+"/Myreports/"+testMethodName+".png";
+		FileUtils.copyFile(source,new File(destinationFile));
+		System.out.println("Screen Shot Taken");
+	}
 }
